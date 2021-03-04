@@ -10,9 +10,11 @@ Launch 2 instances of the server:
 1. An instance only accessible via the container network just created:
 docker run --network my-user-defined-network-name image/name
 
-2. An instance accessible from outside, so we can communicate with it, using postman, and then communicate with the hidden server:
+2. An instance accessible from outside, so we can communicate with it, using postman, and then communicate with the hidden server using the exposed server:
 docker run -p 127.0.0.1:9001:9001 --network my-user-defined-network-name image/name
 
-Connecting to the default container network, bridge, wont allow inter contaier communication using names. It's one of the advantages of using a user-defined network.
+Connecting to the default container network, bridge, wont allow inter container communication using names.
+
+Container communication using names is one of the advantages of using a user-defined network.
 
 
