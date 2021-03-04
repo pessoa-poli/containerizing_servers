@@ -6,7 +6,7 @@ After downloading the repo, one can build a container image using the Dockerfile
 Create a user defined network:
 $docker network create my-user-defined-network-name
 
-Launch 2 instance of the server
+Launch 2 instances of the server:
 1. An instance only accessible via the container network just created:
 docker run --network my-user-defined-network-name image/name
 
